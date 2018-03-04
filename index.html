@@ -1,10 +1,43 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Hello Coursera</title>
-    </head>
-    <body>
-        <h1>Hello Angular lets learn this thing</h1>
-        
-    </body>
+<!doctype html>
+<html lang="en"  ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        .message {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .error {
+            border-color: red;
+        }
+    </style>
+  </head>
+<body>
+   <div class="container" ng-controller="LunchController">
+        <form name="userForm" novalidate>
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" name="input" type="text"
+              class="form-control" ng-model="foodItem" ng-list required>
+              <span> {{enjoyormuch}}</span>
+              <div ng-messages="userForm.input.$error" ng-if="userForm.input.$touched">
+                  <p ng-message="required">Food name is required.</p>
+         </div>
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="addItemList()">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+         </div>
+        </form>
+   </div>
+</div>
+</body>
 </html>
