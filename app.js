@@ -11,9 +11,9 @@
             $scope.foodCount = $scope.foodItem.split(',').length;
             var foodCount = list.length;
             if (foodCount <= 3) {
-                $scope.enjoyormuch = "Enjoy";
+                $scope.result = "Enjoy";
             } else if (foodCount > 3) {
-                $scope.enjoyormuch = "Too Much";
+                $scope.result = "Too Much";
             }
         };
     }

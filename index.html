@@ -24,8 +24,8 @@
 
          <div class="form-group">
              <input id="lunch-menu" name="input" type="text"
-              class="form-control" ng-model="foodItem" ng-list required>
-              <span> {{enjoyormuch}}</span>
+              class="form-control" ng-model="foodItem" ng-list required {{result}}>
+              
               <div ng-messages="userForm.input.$error" ng-if="userForm.input.$touched">
                   <p ng-message="required">Food name is required.</p>
          </div>
